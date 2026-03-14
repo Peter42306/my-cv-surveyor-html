@@ -30,18 +30,35 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 #ports a{
   text-decoration: underline;
-  text-decoration-color: #eee;
+  text-decoration-color: #ccc;
 }
 #ports a:hover {
-    text-decoration-color: #ccc;
+    text-decoration-color: #eee;
 }
 
 .experience-link{
   text-decoration: underline;
-  text-decoration-color: #eee;
+  text-decoration-color: #ccc;
 }
 .experience-link:hover{
-  text-decoration-color: #ccc;
+  text-decoration-color: #eee;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  margin: 16px 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border: 0;
 }
 </style>
 </head>
@@ -53,16 +70,17 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 </nav>
 
 <!-- Hidden Sidebar (reveals when clicked on menu icon)-->
-<nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+<nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:50px;right:0;z-index:2" id="mySidebar">
   <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
     <i class="fa fa-remove"></i>
   </a>
   <div class="w3-bar-block w3-center">
     <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
     <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">About</a>        
-    <a href="#services" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Services</a>      
     <a href="#ports" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Ports</a>
-    <a href="#gallery" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Photos</a>
+    <a href="#services" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Services</a>      
+    <a href="#tools" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Tools</a>      
+    <a href="#photos" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Photos</a>
     <a href="experience.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Experience</a>
     <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact</a>
   </div>
@@ -92,13 +110,11 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
     <h2>About</h2>
     <hr class="w3-opacity">
-    <p class="w3-wide">Independent Marine and Cargo Surveyor with over 20 years of experience in marine and cargo inspections. Commodity inspections can be arranged ofr cargoes such as grains, oilseeds, oilseed meals, vegetable oils, steel products. Technial inspections can also be performed, including ships condition surveys, draught surveys, bunker surveys and maritime investigations. Stock inspections can also be performed. For more details, see my <a href="experience.html" class="experience-link">experience</a>.</p>        
-    <p class="w3-wide">Based in Constanta, Romania, and available for inspections in Romania, Bulgaria and Moldova. Other European ports can also be considered upon request.</p>
-    
-    <hr class="w3-opacity" style="opacity:0;">
-    <h3>Key Areas</h3>
-    <p class="w3-small">Grain Cargo Inspection | Vegetable Oil Inspection | Petroleum Products Survey | Steel Products Inspection | Draught Survey | On-hire Bunker Survey | On-hire Condition Surveys | Bunker Survey during Bunkering Operations | Ships Pre-purchase Condition Surveys | Stock Inspections | Damage Surveys | Collecting Evidences | Investigations</p>
-        
+    <p class="w3-wide">Independent Marine and Cargo Surveyor with over 20 years of experience in marine and cargo inspections. </p>
+    <p class="w3-wide">Commodity inspections and commodity stock inspections can be arranged for cargoes such as grains, oilseeds, oilseed meals, vegetable oils and steel products.</p>
+    <p class="w3-wide">Technical inspections can also be performed, including ships condition surveys, draught surveys, bunker surveys and maritime investigations.</p>        
+    <p class="w3-wide">Based in Constanta, Romania, and available for inspections in Romania, Bulgaria and Moldova. Other European ports can also be considered upon request. For more details, see my <a href="experience.html" class="experience-link">experience</a>.</p>   
+            
   <!-- End About Section -->
   </div>
 
@@ -144,11 +160,11 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <a href="ports/rethymno.html">Rethymno</a>
     </p>
 
-    <!-- <p class="w3-margin-top w3-wide">
+    <p class="w3-margin-top w3-wide">
       <strong>THE NETHERLANDS:</strong>      
-      <a href="ports/giurgiulesti.html">Rotterdam</a>,
-      <a href="ports/giurgiulesti.html">Sas van Gent</a>
-    </p>    -->
+      <a href="ports/rotterdam.html">Rotterdam</a>,
+      <!-- <a href="ports/giurgiulesti.html">Sas van Gent</a> -->
+    </p>   
   
   <!-- End Education Section -->
   </div>
@@ -232,18 +248,86 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   
   <!-- End Skills Section -->
   </div>
+
+
+  <div class=" w3-content w3-justify w3-text-grey w3-padding-32" id="tools">
+    <h2 class="w3-text-grey" id="gallery">Web Tools</h2>
+    <hr>
+    
+    <p>Some of inspection processes can be supported by simple web tools developed to assist marine and cargo surveyors with notes, calculations and reporting during inspections.</p>
+
+    <hr class="w3-opacity" style="opacity:0;">
+    <h3>Draught Survey Web App</h3>    
+    <div class="video-container">
+      <iframe 
+        src="https://youtube.com/embed/w-mKc8zRkAc"
+        title="Draught Survey Web App Demo"
+        allowfullscreen>        
+      </iframe>
+    </div>  
+    <p class="w3-center w3-margin-top">
+      <a href="https://draught-survey.p.zalizko.site/" target="_blank"
+        class="w3-button w3-light-grey w3-padding-large">
+        <i class="fa fa-external-link"></i> Open Web App
+      </a>
+    </p>
+    
+    <h4>About</h4>
+    <p>This web application is designed to perform accurate draught survey calculations.</p>
+    <p>It allows you to keep your data securely in the cloud storage and perform surveys across multiple devices.</p>
+    
+    <h4>Features</h4>
+    <p>Create, edit, delete, and keep your inspections in cloud storage.</p>
+    <p>Keep in the cloud main vessel information (LBP, Light Ship, distances draught marks from PP, etc.), and automatically reuse it for the future inpections.</p>
+    <p>Autofill the hydrostatic data based on previous inspections or saved enties.</p>
+    <p>Add and update your notes during inspection.</p>
+    <p>Export results to Excel file for more convenient reporting, printing, or further editing, using ready-to-use public templates.</p>    
+
+    <hr class="w3-opacity" style="opacity:0;">
+    <h3>Trucks Weighing Web App</h3>    
+    <div class="video-container">
+      <iframe 
+        src="https://youtube.com/embed/4bdfnxBKocM"
+        title="Trucks Weighing Web App Demo"
+        allowfullscreen>        
+      </iframe>
+    </div>  
+    <p class="w3-center w3-margin-top">
+      <a href="https://trucks.p.zalizko.site/" target="_blank"
+        class="w3-button w3-light-grey w3-padding-large">
+        <i class="fa fa-external-link"></i> Open Web App
+      </a>
+    </p>
+    
+    <h4>About</h4>
+    <p>Trucks Weighing Web App is a web application for cargo surveyors and tally teams that helps control cargo weight during truck operations at terminals - in ports, warehouses, and silos (loading or discharging).</p>    
+    <p>Your data is stored securely in the database and can be accessed from multiple devices for team workflows.</p>
+    
+    <h4>Features</h4>
+    <p>Two control points: weighbridge and at berth (cargo operations).</p>
+    <p>Truck statuses: the operator at weighbridge point can see at glance the status of all trucks - after initial weighing, under cargo operations, arrival at the cargo operations area, cargo operations started/finished, and after final weighing.</p>
+    <p>Safety logic: the operator at the cargo operations point can verify, which trucks have passed the initial weighing and are ready for cargo operations.</p>
+    <p>Extended team workflow: multi-user concurrent input.</p>
+    <p>Notes: add and update your notes during inspection, notes are visible to the tally team.</p>
+    <p>Plate number autocomplete: based on previously entered values.</p>
+    <p>Logo: select a logo on the inspection form, it is printed in the PDF header. Up to 5 logos per account.</p>
+    <p>PDF export: standard daily and summary “Tally Sheet”, totals and balance, optional period filtering.</p>    
+    
+  </div>
+
+
   
 
   <!-- Portfolio Section -->
-  <div class="w3-padding-32 w3-content">
-    <h2 class="w3-text-grey" id="gallery">Inspection Photos</h2>
+  <div class="w3-padding-32 w3-text-grey w3-content w3-justify" id="photos">
+    <h2 id="gallery">Inspection Photos</h2>
     <hr class="w3-opacity">
-    <p class="w3-small">Examples of photos taken during cargo inspections and vessel inspections in different ports.</p>
+    <p>Examples of photos taken during cargo inspections and vessel inspections in different ports.</p>
 
     <!-- Grid for photos -->
     <div class="w3-row-padding" style="margin:0 -16px">
       <div class="w3-half">
-        <img src="/images//Gallery_4_20250209_093626.jpg" style="width:100%">        
+        <img src="/images/Port_Seville_20250210_182249.jpg" style="width:100%">        
         <img src="/images/Gallery_9_20251224_121351.jpg" style="width:100%">                
         <img src="/images/Gallery_7_20250221_143514.jpg" style="width:100%">
         <img src="/images/Gallery_14_20250422_162525.jpg" style="width:100%">        
@@ -311,6 +395,12 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
         
   <!-- End Contact Section -->    
   </div>  
+
+  <!-- SEO footer -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-32">    
+    <p class="w3-small w3-wide">Key Areas</p>    
+    <p class="w3-small">Grain Cargo Inspection | Vegetable Oil Inspection | Sunflower Seed Oil Inspection | Petroleum Products Survey | Diesel Oil Inspection | Gasoline Inspection | Steel Products Inspection | Pre-Loading Survey | Pre-Shipment Survey | Tally Count | Draught Survey | On-hire Bunker Survey | Off-hire Bunker Survey | Bunker Survey during Bunkering Operations | On-hire Ships Condition Surveys | Off-hire Ships Condition Surveys | Ships Pre-purchase Condition Surveys | P&I Ships Condition Survey | Stock Inspections | Damage Surveys | Collecting Evidences | Investigations</p>
+  </div>
 
   
   
