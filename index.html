@@ -381,18 +381,34 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <!-- Image of location/map -->
     <!-- <img src="/images/IMG_20240208_131133.jpg" style="width:100%;margin:32px 0">     -->
    
-    <!-- <p>Please feel free to contact me for survey attendance, cargo inspections and related inquiries.</p>
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
+    <p>Please feel free to contact me for survey attendance, cargo inspections and related inquiries.</p>
+    <form id="contactForm">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="senderName" maxlength="100"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Email" required name="senderEmail" maxlength="200"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required name="subject" maxlength="200"></p>
+      <!-- <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="body" maxlength="5000"></p> -->
+      <p><textarea class="w3-input w3-padding-16 w3-border" placeholder="Message" required maxlength="5000" rows="5" name="body"></textarea></p>
+      <div
+        id="contactSuccess"
+        class="w3-panel w3-pale-green w3-border w3-border-green"
+        style="display: none;">
+      </div>
+      <div
+        id="contactError"
+        class="w3-panel w3-pale-red w3-border w3-border-red"
+        style="display: none;">
+      </div>
+        
       <p>
-        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        <button 
+          id="contactSubmitButton" 
+          class="w3-button w3-light-grey w3-padding-large" 
+          type="submit">
+          <i class="fa fa-paper-plane"></i>
+          <span id="contactSubmitText">SEND MESSAGE</span> 
         </button>
       </p>
-    </form> -->
+    </form>
 
     <!-- Image of location/map -->
     <img src="/images/Ports_Constanta_Screenshot_2026-03-12_110520.jpg" style="width:100%;margin:32px 0" loading="lazy">
@@ -446,45 +462,87 @@ function closeNav() {
 
 // Contact form
 const contactForm = document.getElementById("contactForm");
-const sendBtn = document.getElementById("sendBtn");
-const formStatus = document.getElementById("formStatus");
-const CONTACT_FORM_API_URL = "https://api.p.zalizko.site";
+  const contactSubmitButton =
+    document.getElementById("contactSubmitButton");
+  const contactSubmitText =
+    document.getElementById("contactSubmitText");
+  const contactSuccess =
+    document.getElementById("contactSuccess");
+  const contactError =
+    document.getElementById("contactError");
 
-contactForm.addEventListener("submit", async function(e){
-  e.preventDefault();
+  contactForm.addEventListener("submit", async function (event) {
+    event.preventDefault();
 
-  const formData = new FormData(contactForm);
+    contactSuccess.style.display = "none";
+    contactError.style.display = "none";
 
-  const payload = {
-    name: formData.get("name"),
-    email: formData.get("email"),
-    subject: formData.get("subject"),
-    message: formData.get("message")
-  };
+    contactSubmitButton.disabled = true;
+    contactSubmitText.textContent = "SENDING...";
 
-  try {
-    sendBtn.disabled = true;
-    formStatus.textContent = "Sending...";
+    const formData = new FormData(contactForm);
 
-    const response = await fetch(`${CONTACT_FORM_API_URL}/api/contact`,{
-      method: "POST",
-      header:{
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(payload)
-    });
+    const payload = {
+      appKey: "surveyor",
+      senderName: formData.get("senderName"),
+      senderEmail: formData.get("senderEmail"),
+      subject: formData.get("subject"),
+      body: formData.get("body")
+    };
 
-    if (!response.ok) {
-      throw new Error("Failed to send.");
+    try {
+      const response = await fetch(
+        "https://contact-form-api.zalizko.site/api/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(payload)
+        }
+      );
+
+      const text = await response.text();
+      const result = text ? tryParseJson(text) : null;
+
+      if (!response.ok) {
+        const message =
+          result?.message ||
+          result?.error ||
+          result?.title ||
+          (typeof result === "string" ? result : "") ||
+          `HTTP ${response.status}`;
+
+        throw new Error(message);
+      }
+
+      contactSuccess.textContent =
+        result?.message || "Your message has been sent successfully.";
+
+      contactSuccess.style.display = "block";
+      contactForm.reset();
+    } catch (error) {
+      contactError.textContent =
+        error.message || "Failed to send the message.";
+
+      contactError.style.display = "block";
+    } finally {
+      contactSubmitButton.disabled = false;
+      contactSubmitText.textContent = "SEND MESSAGE";
     }
+  });
 
-    alert("Message sent successfully!");
-    contactForm.reset();
-
-  } catch (error) {
-    alert("Something went wrong.")
+  function tryParseJson(text) {
+    try {
+      return JSON.parse(text);
+    } catch {
+      return text;
+    }
   }
-})
+
+
+
+
 </script>
 
 </body>
