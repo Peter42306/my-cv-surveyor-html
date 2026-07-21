@@ -124,7 +124,10 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <h2>Ports</h2>
     <hr/>    
 
-    <p class="w3-margin-top w3-wide">
+    <h3>Coverage area</h3>
+    
+    <p>Short-notice attendance.</p>      
+    <p class="w3-margin-top w3-wide">      
       <strong>ROMANIA:</strong>
       <a href="ports/constanta.html">Constanta</a>,
       <a href="ports/midia.html" >Midia</a>      
@@ -140,6 +143,12 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <a href="ports/varna.html" class="w3-wide">Varna</a>,
       <a href="ports/balchik.html" class="w3-wide">Balchik</a>
     </p>
+
+    <hr class="w3-opacity" style="opacity:0;">
+
+    <h3>Other Ports</h3>
+    <p>Attendance is available for planned inspections and larger assignments.</p>
+    
 
     <p class="w3-margin-top w3-wide">
       <strong>ITALY:</strong>
@@ -363,52 +372,115 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <hr class="w3-opacity">
 
     <div class="w3-section">
-      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>Constanta, Romania</p>
-      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i>+40 748 011 160</p>
-      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i>pzalizko@gmail.com</p>      
-      <p>
-        <a href="https://wa.me/380674804846" target="_blank" rel="noreferrer" style="text-decoration: none;">
-          <i class="fa fa-whatsapp fa-fw w3-xxlarge w3-margin-right"></i>WhatsApp
-        </a>  
-      </p>
-      <p>
-        <a href="https://t.me/Petr42306" target="_blank" rel="noreferrer" style="text-decoration: none;">
-          <i class="fa fa-telegram  fa-fw w3-xxlarge w3-margin-right"></i>Telegram
-        </a>
-      </p>      
+      <div class="w3-row">
+        <div class="w3-third">
+          <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>Constanta, Romania</p>
+          
+          <p>
+            <a href="tel:+40748011160" style="text-decoration: none;">
+              <i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i>
+              +40 748 011 160
+            </a>        
+          </p>
+
+          <p>
+            <a href="mailto:pzalizko@gmail.com" style="text-decoration: none;">
+              <i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i>pzalizko@gmail.com
+            </a>        
+          </p>      
+
+          <p>
+            <a href="https://wa.me/40748011160" target="_blank" rel="noreferrer" style="text-decoration: none;">
+              <i class="fa fa-whatsapp fa-fw w3-xxlarge w3-margin-right"></i>WhatsApp
+            </a>  
+          </p>
+
+          <p>
+            <a href="https://t.me/Petr42306" target="_blank" rel="noreferrer" style="text-decoration: none;">
+              <i class="fa fa-telegram  fa-fw w3-xxlarge w3-margin-right"></i>Telegram
+            </a>
+          </p>      
+        </div>
+
+        <div class="w3-twothird">
+          <p>Please feel free to contact me for survey attendance, cargo inspections and related inquiries.</p>
+          <form id="contactForm">
+            <p>
+              <input 
+                class="w3-input w3-padding-16 w3-border" 
+                type="text" 
+                placeholder="Name" 
+                required 
+                name="senderName" 
+                maxlength="100"
+                autocomplete="name">
+            </p>
+            <p>
+              <input 
+                class="w3-input w3-padding-16 w3-border" 
+                type="email" 
+                placeholder="Email" 
+                required 
+                name="senderEmail" 
+                maxlength="200"
+                autocomplete="email">
+            </p>
+            <p>
+              <input 
+                class="w3-input w3-padding-16 w3-border" 
+                type="text" 
+                placeholder="Subject" 
+                required 
+                name="subject" 
+                maxlength="200">
+            </p>            
+            <p>
+              <textarea 
+                class="w3-input w3-padding-16 w3-border" 
+                placeholder="Message" 
+                required 
+                maxlength="5000" 
+                rows="5" 
+                name="body">
+              </textarea>
+            </p>            
+            
+            <div
+              id="contactSuccess"
+              class="w3-panel w3-padding-16 w3-pale-green w3-border w3-border-green"
+              role="status"
+              style="display:none"
+              >
+            </div>
+            <div
+              id="contactError"
+              class="w3-panel w3-padding-16 w3-pale-red w3-border w3-border-red"
+              style="display: none;">
+            </div>
+              
+            <p>
+              <div class="w3-right">
+                <button 
+                  id="contactSubmitButton" 
+                  class="w3-button w3-light-grey w3-padding-large" 
+                  type="submit">
+                  <i class="fa fa-paper-plane"></i>
+                  <span id="contactSubmitText">SEND MESSAGE</span> 
+                </button>
+
+              </div>
+              
+            </p>
+          </form>
+        </div>
+      </div>
+      
     </div>
     
     <!-- Image of location/map -->
     <!-- <img src="/images/IMG_20240208_131133.jpg" style="width:100%;margin:32px 0">     -->
    
-    <p>Please feel free to contact me for survey attendance, cargo inspections and related inquiries.</p>
-    <form id="contactForm">
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="senderName" maxlength="100"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Email" required name="senderEmail" maxlength="200"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required name="subject" maxlength="200"></p>
-      <!-- <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="body" maxlength="5000"></p> -->
-      <p><textarea class="w3-input w3-padding-16 w3-border" placeholder="Message" required maxlength="5000" rows="5" name="body"></textarea></p>
-      <div
-        id="contactSuccess"
-        class="w3-panel w3-pale-green w3-border w3-border-green"
-        style="display: none;">
-      </div>
-      <div
-        id="contactError"
-        class="w3-panel w3-pale-red w3-border w3-border-red"
-        style="display: none;">
-      </div>
-        
-      <p>
-        <button 
-          id="contactSubmitButton" 
-          class="w3-button w3-light-grey w3-padding-large" 
-          type="submit">
-          <i class="fa fa-paper-plane"></i>
-          <span id="contactSubmitText">SEND MESSAGE</span> 
-        </button>
-      </p>
-    </form>
+    
 
     <!-- Image of location/map -->
     <img src="/images/Ports_Constanta_Screenshot_2026-03-12_110520.jpg" style="width:100%;margin:32px 0" loading="lazy">
@@ -433,7 +505,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <!-- <i class="fa fa-linkedin w3-hover-opacity" style="margin: 0 10px;"></i> -->
 
     <div style="display: flex; justify-content: center; gap: 20px;">
-      <a href="https://wa.me/380674804846" target="_blank" rel="noreferrer">
+      <a href="https://wa.me/40748011160" target="_blank" rel="noreferrer">
         <i class="fa fa-whatsapp w3-hover-opacity" style="margin: 0 10px;"></i>
       </a>  
 
@@ -450,44 +522,36 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 </div>
 
 <script>
-// Open and close sidebar
-function openNav() {
-  document.getElementById("mySidebar").style.width = "60%";
-  document.getElementById("mySidebar").style.display = "block";
-}
+  // Open and close sidebar
+  function openNav() {
+    document.getElementById("mySidebar").style.width = "60%";
+    document.getElementById("mySidebar").style.display = "block";
+  }
 
-function closeNav() {
-  document.getElementById("mySidebar").style.display = "none";
-}
+  function closeNav() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
 
-// Contact form
-const contactForm = document.getElementById("contactForm");
-  const contactSubmitButton =
-    document.getElementById("contactSubmitButton");
-  const contactSubmitText =
-    document.getElementById("contactSubmitText");
-  const contactSuccess =
-    document.getElementById("contactSuccess");
-  const contactError =
-    document.getElementById("contactError");
+  // Contact form
+  const contactForm = document.getElementById("contactForm");
+  const contactSubmitButton = document.getElementById("contactSubmitButton");  
+  const contactSuccess = document.getElementById("contactSuccess");
+  const contactError = document.getElementById("contactError");
 
   contactForm.addEventListener("submit", async function (event) {
     event.preventDefault();
 
-    contactSuccess.style.display = "none";
-    contactError.style.display = "none";
-
-    contactSubmitButton.disabled = true;
-    contactSubmitText.textContent = "SENDING...";
+    hideContactMessages();
+    setContactSubmitting(true);
 
     const formData = new FormData(contactForm);
 
     const payload = {
-      appKey: "surveyor",
-      senderName: formData.get("senderName"),
-      senderEmail: formData.get("senderEmail"),
-      subject: formData.get("subject"),
-      body: formData.get("body")
+      appKey: "surveyor-profile",
+      senderName: formData.get("senderName")?.trim() ?? "",
+      senderEmail: formData.get("senderEmail")?.trim() ?? "",
+      subject: formData.get("subject")?.trim() ?? "",
+      body: formData.get("body")?.trim() ?? ""
     };
 
     try {
@@ -511,7 +575,7 @@ const contactForm = document.getElementById("contactForm");
           result?.error ||
           result?.title ||
           (typeof result === "string" ? result : "") ||
-          `HTTP ${response.status}`;
+          `Failed to send the message. HTTP ${response.status}`;
 
         throw new Error(message);
       }
@@ -521,16 +585,26 @@ const contactForm = document.getElementById("contactForm");
 
       contactSuccess.style.display = "block";
       contactForm.reset();
+      
     } catch (error) {
-      contactError.textContent =
-        error.message || "Failed to send the message.";
-
+      contactError.textContent = error.message;
       contactError.style.display = "block";
+
     } finally {
-      contactSubmitButton.disabled = false;
-      contactSubmitText.textContent = "SEND MESSAGE";
+      setContactSubmitting(false);
     }
   });
+
+  function setContactSubmitting(isSubmitting) {
+    contactSubmitButton.disabled = isSubmitting;    
+  }
+
+  function hideContactMessages() {    
+    contactSuccess.style.display = "none";
+    contactError.style.display = "none";
+    contactSuccess.textContent = "";
+    contactError.textContent = "";
+  }
 
   function tryParseJson(text) {
     try {
