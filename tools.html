@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Marine Survey Tools</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/svg+xml" href="../images/notes1.svg">
+
+    <meta name="description" content="Web applications for marine surveyors, including PhotoMap, Draught Survey Calculator and Trucks Weighing.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Petr Zalizko">    
+    
+    <link rel="canonical" href="https://surveyor.p.zalizko.site/tools.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Marine Survey Tools">
+    <meta property="og:description" content="Web applications for marine surveyors, including PhotoMap, Draught Survey Calculator and Trucks Weighing.">
+    <meta property="og:url" content="https://surveyor.p.zalizko.site/tools.html">
+    <meta property="og:image" content="https://surveyor.p.zalizko.site/images/Tools_IMG_20230701_151448_small.jpg">
+    <meta property="og:site_name" content="Petr Zalizko">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Marine Survey Tools">
+    <meta name="twitter:description" content="Web applications for marine surveyors, including PhotoMap, Draught Survey Calculator and Trucks Weighing.">
+    <meta name="twitter:image" content="https://surveyor.p.zalizko.site/images/Tools_IMG_20230701_151448_small.jpg">
+
+
+  <style>
+    body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+    body { font-size: 17px; line-height: 1.6; }
+    .w3-row-padding img {margin-bottom: 12px}
+
+    .bgimg {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* ВАЖНО: мы в /ports/, поэтому ../images/ */
+        background-image: url('../images/Tools_IMG_20230701_151448.jpg');
+        min-height: 100%;
+    }
+
+    .service-list li { padding: 10px 12px; }
+
+    .video-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* 16:9 */
+        height: 0;
+        margin: 16px 0;
+    }
+
+    .video-container iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        border: 0;
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Marine Survey Tools",
+    "url": "https://surveyor.p.zalizko.site/tools.html",
+    "description": "Web applications for marine surveyors, including PhotoMap, Draught Survey Calculator and Trucks Weighing.",
+    "author": {
+      "@type": "Person",
+      "name": "Petr Zalizko",
+      "url": "https://surveyor.p.zalizko.site/"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+<!-- Sidebar with image -->
+<nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
+  <div class="bgimg"></div>
+</nav>
+
+<!-- Hidden Sidebar (same menu across pages) -->
+<nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge"
+     style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="closeNav()"
+     class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+    <i class="fa fa-remove"></i>
+  </a>
+
+  <div class="w3-bar-block w3-center">
+    <a href="../index.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
+    <a href="../index.html#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">About</a>    
+    <a href="../index.html#ports" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Ports</a>    
+    <a href="../index.html#services" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Services</a>      
+    <a href="tools.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Tools</a>
+    <a href="../index.html#photos" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Photos</a>
+    <a href="experience.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Experience</a>    
+    <a href="../index.html#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact</a>
+  </div>
+</nav>
+
+<!-- Page Content -->
+<div class="w3-main w3-padding-large" style="margin-left:40%">
+
+  <!-- Menu icon -->
+  <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black"
+        style="width:auto;right:0;" onclick="openNav()">
+    <i class="fa fa-bars"></i>
+  </span>
+
+  <!-- Header -->
+  <header class="w3-content w3-center w3-padding-32">
+    <h1><b>Marine Survey Tools</b></h1>    
+    <p class="w3-wide">Web Applications for Inspections</p>    
+    
+    <img src="../images/Tools_IMG_20230701_151448.jpg" class="w3-image w3-hide-large w3-round" style="width: 100%;">        
+    
+    <a href="../index.html#contact"
+      class="w3-button w3-light-grey w3-padding-large w3-margin-top"          
+    >
+      <i class="fa fa-envelope"></i> Contact Surveyor
+    </a>    
+    
+
+    
+
+  </header> 
+
+  <div class="w3-content w3-text-grey">    
+    <p>These web applications were developed to assist marine surveyors with inspections, calculations, reporting and photo documentation.</p>    
+    <p>The applications on this page were developed by me to support my work as an independent marine surveyor.</p>
+  </div>
+
+  
+
+  <!-- PhotoMap Section -->
+  <div class="w3-content w3-text-grey w3-padding-32">
+    <h3>PhotoMap</h3>
+    <hr/>
+    <div class="video-container">
+      <iframe 
+        src="https://youtube.com/embed/eq03ucog7kM"
+        title="PhotoMap App Demo"
+        allowfullscreen>        
+      </iframe>
+    </div>  
+    <p class="w3-center w3-margin-top">
+      <a href="https://photo-map.zalizko.site/" target="_blank"
+        class="w3-button w3-light-grey w3-padding-large">
+        <i class="fa fa-external-link"></i> Open Web App
+      </a>
+    </p>
+
+    <h4>About</h4>
+    <p>PhotoMap is a web application that helps organise inspection photos, add notes, and display photo locations on an interactive map.</p>
+    <p>It makes it easier to keep photos from different inspections, add descriptions and locations, and share them with clients or colleagues directly from the inspection site.</p>
+    
+    <h4>Features</h4>
+    <p>Upload photos from your phone or laptop.</p>
+    <p>Display photos on an interactive map.</p>
+    <p>Create separate collections for each inspection.</p>
+    <p>Add descriptions to every photo where needed.</p>
+    <p>Share inspections using a private read-only link.</p>
+    <p>Download resized photos as a ZIP archive.</p>
+    
+  </div>
+  <!-- End PhotoMap Section -->
+
+  <!-- Draught Survey Section -->
+  <div class="w3-content w3-text-grey w3-padding-32">
+    <h3>Draught Survey Web App</h3>
+    <hr/>
+    <div class="video-container">
+      <iframe 
+        src="https://youtube.com/embed/w-mKc8zRkAc"
+        title="Draught Survey Web App Demo"
+        allowfullscreen>        
+      </iframe>
+    </div>  
+    <p class="w3-center w3-margin-top">
+      <a href="https://draught-survey.p.zalizko.site/" target="_blank"
+        class="w3-button w3-light-grey w3-padding-large">
+        <i class="fa fa-external-link"></i> Open Web App
+      </a>
+    </p>
+
+    <h4>About</h4>
+    <p>This web application is designed for ship officers and marine surveyors to perform accurate draught survey calculations.</p>
+    <p>It allows you to keep your data securely in the cloud storage and perform surveys across multiple devices.</p>
+    
+    <h4>Features</h4>
+    <p>Create and manage draught survey reports.</p>
+    <p>Save vessel information for future inspections.</p>
+    <p>Reuse hydrostatic data from previous surveys.</p>
+    <p>Add notes during the inspection.</p>
+    <p>Export results to Microsoft Excel.</p>    
+    
+  </div>
+  <!-- End Draught Survey Section -->
+
+  <!-- Trucks Weighing Section -->
+  <div class="w3-content w3-text-grey w3-padding-32">
+    <h3>Trucks Weighing Web App</h3>
+    <hr/>
+    <div class="video-container">
+      <iframe 
+        src="https://youtube.com/embed/4bdfnxBKocM"
+        title="Trucks Weighing Web App Demo"
+        allowfullscreen>        
+      </iframe>
+    </div>  
+    <p class="w3-center w3-margin-top">
+      <a href="https://trucks.p.zalizko.site/" target="_blank"
+        class="w3-button w3-light-grey w3-padding-large">
+        <i class="fa fa-external-link"></i> Open Web App
+      </a>
+    </p>
+
+    <h4>About</h4>
+    <p>Trucks Weighing Web App is a web application for cargo surveyors and tally teams that helps control cargo weight during truck operations at terminals - in ports, warehouses, and silos (loading or discharging).</p>    
+    <p>Your data is stored securely in the database and can be accessed from multiple devices for team workflows.</p>
+    
+    <h4>Features</h4>
+
+    <p>Multi-user workflow.</p>    
+    <p>Track every truck during loading or discharge.</p>
+    <p>Shared notes.</p>
+    <p>Plate number autocomplete.</p>
+    <p>PDF reports.</p>
+    <p>Company logo on PDF reports.</p>    
+    
+  </div>
+  <!-- End Trucks Weighing Section -->  
+  
+
+  <!-- Contact -->
+  <div class="w3-padding-32 w3-content w3-text-grey" style="margin-bottom:64px">
+    <h2>Contact</h2>
+    <hr>    
+
+    <div class="w3-section">
+      <!-- <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Constanta, Romania</p>
+      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +38 067 480 4846</p> -->
+      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: pzalizko@gmail.com</p>
+      <p>
+        <a href="https://wa.me/380674804846" target="_blank" rel="noreferrer" style="text-decoration: none;">
+          <i class="fa fa-whatsapp fa-fw w3-xxlarge w3-margin-right"></i>WhatsApp
+        </a>  
+      </p>
+      <p>
+        <a href="https://t.me/Petr42306" target="_blank" rel="noreferrer" style="text-decoration: none;">
+          <i class="fa fa-telegram  fa-fw w3-xxlarge w3-margin-right"></i>Telegram
+        </a>
+      </p>      
+      <p>
+        <a href="../index.html#contact" style="text-decoration: none;">
+          <i class="fa fa-comment fa-fw w3-xxlarge w3-margin-right"></i>Contact Surveyor
+        </a>
+      </p>
+    </div>
+
+    <!-- <p>
+      For full experience, qualification and additional services: <a href="../index.html">View Full Profile</a>
+    </p> -->
+  </div>
+
+  <!-- Footer -->
+   <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">                
+
+    <p class="w3-small">
+      Contact me via Telegram or WhatsApp
+    </p>    
+
+    <dev style="display: flex; justify-content: center; gap: 20px;">
+      <a href="https://wa.me/380674804846" target="_blank" rel="noreferrer">
+        <i class="fa fa-whatsapp w3-hover-opacity" style="margin: 0 10px;"></i>
+      </a>  
+
+      <a href="https://t.me/Petr42306" target="_blank" rel="noreferrer">
+        <i class="fa fa-telegram w3-hover-opacity" style="margin: 0 10px;"></i>
+      </a>
+    </dev>    
+  <!-- End footer -->
+  </footer>
+
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "60%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+function closeNav() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>
